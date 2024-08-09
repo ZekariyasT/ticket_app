@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:ticket_app/Screens/search/widgets/app_text_icon.dart';
 import 'package:ticket_app/Screens/search/widgets/app_ticket_tabs.dart';
 import 'package:ticket_app/Screens/search/widgets/find_tickets.dart';
-import 'package:ticket_app/base/res/media.dart';
+import 'package:ticket_app/Screens/search/widgets/ticket_promotion.dart';
+
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
 
@@ -11,7 +13,6 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppStyles.bgColor,
       body: ListView(
@@ -23,7 +24,10 @@ class SearchScreen extends StatelessWidget {
             style: AppStyles.headLineStyle1.copyWith(fontSize: 35),
           ),
           const SizedBox(height: 20),
-          const AppTicketTabs(),
+          const AppTicketTabs(
+            firstTab: "All tickets",
+            secondTab: "Hotels",
+          ),
           const SizedBox(height: 25),
           const AppTextIcon(
             icon: Icons.flight_takeoff_rounded,
@@ -45,78 +49,7 @@ class SearchScreen extends StatelessWidget {
             },
           ),
           const SizedBox(height: 15),
-          Row(
-            children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                width: size.width * 0.42,
-                height: 405,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade200,
-                        blurRadius: 1,
-                        spreadRadius: 2,
-                      )
-                    ]),
-                child: Column(
-                  children: [
-                    Container(
-                      height: 190,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(AppMedia.planeSit)),
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Text(
-                      "20% discount on the early booking of this flight. Don't miss",
-                      style: AppStyles.headLineStyle2,
-                    )
-                  ],
-                ),
-              ),
-              Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15, vertical: 15),
-                    width: size.width * .44,
-                    height: 210,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
-                      color: const Color(0xFF3A8888),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Discount\nfor survey",
-                          style: AppStyles.headLineStyle2.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text(
-                          "Take the survey about our services and get discount",
-                          style: AppStyles.headLineStyle2.copyWith(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              )
-            ],
-          )
+          const TicketPromotion(),
         ],
       ),
     );
