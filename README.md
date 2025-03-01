@@ -16,7 +16,7 @@ The **Flutter Ticket App** is a mobile application designed for booking airplane
 ## Installation
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your-username/flutter-ticket-app.git
+   git clone https://github.com/ZekariyasT/ticket_app/.git
    cd flutter-ticket-app
    ```
 2. **Install dependencies**
