@@ -6,15 +6,12 @@ The **Flutter Ticket App** is a mobile application designed for booking airplane
 ## Features
 - **Flight Booking**: Search and book airplane tickets easily.
 - **Hotel Listings**: View different hotels along with their prices.
-- **User Authentication**: Secure login and registration system.
-- **Payment Integration**: Supports multiple payment gateways.
 - **Modern UI**: Smooth and intuitive interface designed with Flutter.
 
 ## Technologies Used
 - **Flutter** (Dart) - Frontend framework
-- **Firebase** - Authentication and database (optional)
 - **REST API** - Fetch flight and hotel data
-- **Provider / Riverpod** - State management
+- **Provider ** - State management
 
 ## Installation
 1. **Clone the repository**
@@ -30,15 +27,6 @@ The **Flutter Ticket App** is a mobile application designed for booking airplane
    ```sh
    flutter run
    ```
-
-## Screenshots
-(Add screenshots of your app here)
-
-## Future Enhancements
-- Add seat selection feature
-- Integrate more payment options
-- Implement push notifications for booking updates
-
 ## Contributing
 Feel free to fork the repository and submit pull requests.
 
